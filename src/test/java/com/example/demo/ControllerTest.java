@@ -22,7 +22,7 @@ public class ControllerTest {
     //初始化mockMvc
     @BeforeAll//表示在所有测试动作之前执行-------表示对Hello这个controller进行测试
     static void setMockMvc() {
-        mockMvc = MockMvcBuilders.standaloneSetup(new Hello()).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(new HelloController()).build();
     }
 
     @Test//测试方法必须是public void

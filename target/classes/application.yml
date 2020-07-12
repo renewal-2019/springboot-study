@@ -1,0 +1,11 @@
+#配置服务端口
+server:
+  port: 8888
+
+#配置全局时间格式
+#在项目中也可以进行个性化配置 --- @JsonFormat(pattern = "MM-dd-yyyy HH:mm:ss", timezone = "GMT+8")
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
