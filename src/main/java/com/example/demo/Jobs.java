@@ -1,0 +1,19 @@
+package com.example.demo;
+
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+
+@Component
+public class Jobs {
+
+    //表示方法执行完成后5秒再开始执行
+    @Scheduled(cron = "0 0 23 * * *")
+    public void fixedDelayJob() throws InterruptedException{
+        System.out.println("fixedDelay 开始:" + new Date());
+        Thread.sleep(10 * 1000);
+        System.out.println("fixedDelay 结束:" + new Date());
+    }
+
+}
